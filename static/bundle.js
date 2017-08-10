@@ -15290,6 +15290,7 @@ function loadSample() {
     var selector = document.getElementById("controls-sample");
     $.ajax({
         url: "static/samples/" + selector.value,
+        dataType: "text",
         success: function(data) {
             loadStructure(xyz(data)[0]);
         }
@@ -16315,6 +16316,7 @@ function loadProgram(gl, src) {
 },{"./cube":"/home/rye/Dropbox/src/speck/src/cube.js","./elements":"/home/rye/Dropbox/src/speck/src/elements.js","./gl-matrix":"/home/rye/Dropbox/src/speck/src/gl-matrix.js","./system":"/home/rye/Dropbox/src/speck/src/system.js","./view":"/home/rye/Dropbox/src/speck/src/view.js","./webgl.js":"/home/rye/Dropbox/src/speck/src/webgl.js"}],"/home/rye/Dropbox/src/speck/src/samples.js":[function(require,module,exports){
 module.exports = [
     {name: "Bainite-habit{2 9 5}", file: "Bainite_Habit295.xyz"},
+    {name: "MgZn2 hexagonal Laves Structure", file:"c14-Laves-MgZn2.xyz"},
     {name: "Testosterone", file: "testosterone.xyz"},
     {name: "Caffeine", file: "caffeine.xyz"},
     {name: "Protein 4E0O", file: "4E0O.xyz"},
